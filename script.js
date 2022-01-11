@@ -1,8 +1,6 @@
 const pass = document.querySelector(".password");
 const msg = document.querySelector(".message");
 const str = document.querySelector("#strength");
-const btn = document.querySelector(".toggler");
-
 // conditions
 pass.addEventListener("input", () => {
   if (pass.value.length > 0) {
