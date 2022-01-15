@@ -1,6 +1,7 @@
 const pass = document.querySelector(".password");
 const msg = document.querySelector(".message");
 const str = document.querySelector("#strength");
+const btn = document.querySelector(".toggler");
 // conditions
 pass.addEventListener("input", () => {
   if (pass.value.length > 0) {
@@ -24,5 +25,9 @@ pass.addEventListener("input", () => {
     str.innerText = "very strong";
     pass.style.borderColor = "#26d730";
     msg.style.color = "#26d730";
+  }
+  if (pass.value.startsWith(" ")) {
+    str.innerText = "Password can't start with space !";
+    pass.value = "";
   }
 });
